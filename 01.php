@@ -4,21 +4,10 @@ include 'includes/header.php';
 
 // Definir una clase
 class Producto {
-
-    public $nombre;
-    public $precio;
-    public $disponible;
-
-    //Constructor
-    public function __construct( string $nombre, int $precio, bool $disponible)
-    {
-        $this->nombre = $nombre;
-        $this->precio = $precio;
-        $this->disponible = $disponible;
-    }
+    public function __construct( public string $nombre, public int $precio, public bool $disponible) {}
 }
 
-$producto = new Producto('Tablet', 200, true);
+$producto = new Producto('Tablet', 150, true);
 
 echo "<pre>";
 var_dump($producto);
