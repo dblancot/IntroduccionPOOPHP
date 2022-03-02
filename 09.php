@@ -3,6 +3,7 @@
 // Conectar a BD con Mysqli
 
 $db = new mysqli('localhost', 'root', 'Dener2016!', 'bienes_inmuebles');
+$db->set_charset("utf8");
 
 //Creamos la query
 $query = "SELECT titulo, imagen FROM propiedades";
